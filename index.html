@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prashanth Kavuri — Fresher Frontend Developer</title>
+  <meta name="description" content="Prashanth Kavuri - Fresher frontend developer portfolio — Java, JS, HTML, CSS, DSA, ML basics." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero">Prashanth Kavuri</a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hi — I'm <span class="name">Prashanth Kavuri</span></h1>
+          <p class="role">Fresher | Frontend Developer | Java</p>
+          <p class="lead">I build clean, accessible user interfaces and practice algorithms to write efficient code.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contact">Contact Me</a>
+            <a class="btn btn-ghost" href="#projects">View Projects</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="profile-pulse">
+            <!-- Add a profile image by replacing the empty src attribute -->
+            <img src="" alt="Profile placeholder" class="profile-img" />
+            <p class="profile-caption">Fresher Frontend Dev</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-sub">Technologies & areas I'm focused on</p>
+        <div class="skills-grid">
+          <div class="skill">Java</div>
+          <div class="skill">Data Structures & Algorithms</div>
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Basics of Machine Learning</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Small projects to demonstrate practical skills</p>
+        <div class="projects-grid">
+          <article class="card project-card">
+            <h3>Typing Speed Test</h3>
+            <p class="muted">A JavaScript-based typing speed tester — measures WPM & accuracy.</p>
+            <p class="tags">JavaScript · DOM · UX</p>
+            <div class="card-actions">
+              <a class="btn btn-sm" href="#">Live Demo</a>
+              <a class="btn btn-ghost btn-sm" href="#">Source</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Portfolio Website</h3>
+            <p class="muted">This single-page portfolio built with HTML, CSS, and vanilla JS.</p>
+            <p class="tags">Responsive · Accessibility · Design</p>
+            <div class="card-actions">
+              <a class="btn btn-sm" href="#">Live</a>
+              <a class="btn btn-ghost btn-sm" href="#">Source</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <h3>Mini ML Project</h3>
+            <p class="muted">A simple experiment demonstrating basic ML concepts and visualization.</p>
+            <p class="tags">Python · ML · Visualization</p>
+            <div class="card-actions">
+              <a class="btn btn-sm" href="#">Details</a>
+              <a class="btn btn-ghost btn-sm" href="#">Source</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">I'd love to connect — feel free to reach out</p>
+        <div class="contact-cards">
+          <a class="contact-card" href="mailto:prashanthkavuri786@gmail.com">
+            <div class="icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p>prashanthkavuri786@gmail.com</p>
+            </div>
+          </a>
+
+          <a class="contact-card" href="https://github.com/237y1a6697" id="github-link">
+            <div class="icon">🐙</div>
+            <div>
+              <h4>GitHub</h4>
+              <p>github.com/237y1a6697</p>
+            </div>
+          </a>
+
+          <a class="contact-card" href="https://www.linkedin.com/in/kavuriprashanth/" id="linkedin-link">
+            <div class="icon">💼</div>
+            <div>
+              <h4>LinkedIn</h4>
+              <p>linkedin.com/in/kavuriprashanth</p>
+            </div>
+          </a>
+
+          <a class="contact-card" href="https://leetcode.com/u/tuO7vJj6SL/">
+            <div class="icon">💡</div>
+            <div>
+              <h4>LeetCode</h4>
+              <p>leetcode.com/u/tuO7vJj6SL</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Prashanth Kavuri — Fresher Frontend Developer</p>
+      <p class="muted">Built with HTML, CSS & JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
