@@ -2,9 +2,6 @@
 
 A modern, responsive portfolio website showcasing my skills as a fresher frontend developer.
 
-## 🚀 Live Demo
-View the live portfolio at: https://237y1a6697.github.io/portfolio-website/
-
 ## 🛠️ Technologies Used
 - HTML5
 - CSS3 (with CSS Grid & Flexbox)
@@ -32,3 +29,4 @@ View the live portfolio at: https://237y1a6697.github.io/portfolio-website/
 
 ---
 Built with ❤️ by Prashanth Kavuri
+
