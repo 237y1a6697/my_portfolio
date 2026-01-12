@@ -23,7 +23,7 @@ View the live portfolio at: https://237y1a6697.github.io/portfolio-website/
 - **Email:** prashanthkavuri786@gmail.com
 - **LinkedIn:** [linkedin.com/in/kavuriprashanth](https://www.linkedin.com/in/kavuriprashanth/)
 - **GitHub:** [github.com/237y1a6697](https://github.com/237y1a6697)
-- **LeetCode:** [leetcode.com/u/tuO7vJj6SL](https://leetcode.com/u/tuO7vJj6SL/)
+- **LeetCode:** [leetcode.com/u/prashanth](https://leetcode.com/u/tuO7vJj6SL/)
 
 ## 🏃‍♂️ Local Development
 1. Clone the repository
