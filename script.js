@@ -11,6 +11,15 @@ document.addEventListener('DOMContentLoaded', function(){
     const isOpen = navList.style.display === 'flex';
     navList.style.display = isOpen ? 'none' : 'flex';
   });
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
   // Smooth scrolling for internal links
   document.querySelectorAll('a[href^="#"]').forEach(link => {
