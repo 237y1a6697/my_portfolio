@@ -1,165 +1,110 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Beginner-friendly JavaScript for navigation, smooth scrolling and small UI helpers
-document.addEventListener('DOMContentLoaded', function(){
-  // Update copyright year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Mobile nav toggle
-  const navToggle = document.getElementById('nav-toggle');
-  const navList = document.getElementById('nav-list');
-  navToggle && navToggle.addEventListener('click', function(){
-    // Toggle visibility for mobile nav
-    const isOpen = navList.style.display === 'flex';
-    navList.style.display = isOpen ? 'none' : 'flex';
-  });
-const scrollBtn = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", () => {
-  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+// Initialize AOS Animation Library
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: 'ease-in-out',
+    });
 });
 
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+// Sticky Navbar
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
 
-  // Smooth scrolling for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e){
-      const targetId = this.getAttribute('href').slice(1);
-      const target = document.getElementById(targetId);
-      if(target){
+// Mobile Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links a');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    
+    // Toggle Icon
+    const icon = hamburger.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+
+// Close mobile menu on link click
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const icon = hamburger.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    });
+});
+
+// Typing Effect for Hero Section
+const roles = ["Full-Stack Developer", "AI/ML Engineer", "Problem Solver", "Tech Enthusiast"];
+const typingText = document.querySelector('.typing-text');
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingDelay = 100;
+
+function typeEffect() {
+    const currentRole = roles[roleIndex];
+    
+    if (isDeleting) {
+        typingText.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+        typingDelay = 50;
+    } else {
+        typingText.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+        typingDelay = 100;
+    }
+
+    if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        typingDelay = 2000; // Pause at end of word
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typingDelay = 500; // Pause before new word
+    }
+
+    setTimeout(typeEffect, typingDelay);
+}
+
+// Start typing effect
+if (typingText) {
+    setTimeout(typeEffect, 1000);
+}
+
+// Contact Form Submit Handler
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // close mobile nav when navigating
-        if(window.innerWidth <= 900) navList.style.display = 'none';
-        // Smooth scroll
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-      }
+        
+        // Change button text to show success (mock)
+        const btn = contactForm.querySelector('button');
+        const originalText = btn.innerHTML;
+        
+        btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+        btn.style.background = 'linear-gradient(135deg, #00f3ff, #00ff88)';
+        
+        // Reset form
+        contactForm.reset();
+        
+        // Reset button after 3 seconds
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+        }, 3000);
     });
-  });
-
-  // Simple reveal-on-scroll: add 'reveal' class when element is visible
-  const revealElements = document.querySelectorAll('.card, .skill, .hero-text, .hero-card');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('reveal');
-      }
-    });
-  }, {threshold: 0.12});
-  revealElements.forEach(el => revealObserver.observe(el));
-
-});
-
-/* Notes for beginners:
- - This file uses only modern, plain JS APIs.
- - `scrollIntoView` provides smooth scrolling without a library.
- - `IntersectionObserver` is used for lightweight scroll reveals.
-*/
-=======
-// Beginner-friendly JavaScript for navigation, smooth scrolling and small UI helpers
-document.addEventListener('DOMContentLoaded', function(){
-  // Update copyright year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Mobile nav toggle
-  const navToggle = document.getElementById('nav-toggle');
-  const navList = document.getElementById('nav-list');
-  navToggle && navToggle.addEventListener('click', function(){
-    // Toggle visibility for mobile nav
-    const isOpen = navList.style.display === 'flex';
-    navList.style.display = isOpen ? 'none' : 'flex';
-  });
-
-  // Smooth scrolling for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e){
-      const targetId = this.getAttribute('href').slice(1);
-      const target = document.getElementById(targetId);
-      if(target){
-        e.preventDefault();
-        // close mobile nav when navigating
-        if(window.innerWidth <= 900) navList.style.display = 'none';
-        // Smooth scroll
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-      }
-    });
-  });
-
-  // Simple reveal-on-scroll: add 'reveal' class when element is visible
-  const revealElements = document.querySelectorAll('.card, .skill, .hero-text, .hero-card');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('reveal');
-      }
-    });
-  }, {threshold: 0.12});
-  revealElements.forEach(el => revealObserver.observe(el));
-
-});
-
-/* Notes for beginners:
- - This file uses only modern, plain JS APIs.
- - `scrollIntoView` provides smooth scrolling without a library.
- - `IntersectionObserver` is used for lightweight scroll reveals.
-*/
->>>>>>> 1760a40 (Initial commit: Portfolio website)
-=======
-// Beginner-friendly JavaScript for navigation, smooth scrolling and small UI helpers
-document.addEventListener('DOMContentLoaded', function(){
-  // Update copyright year
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Mobile nav toggle
-  const navToggle = document.getElementById('nav-toggle');
-  const navList = document.getElementById('nav-list');
-  navToggle && navToggle.addEventListener('click', function(){
-    // Toggle visibility for mobile nav
-    const isOpen = navList.style.display === 'flex';
-    navList.style.display = isOpen ? 'none' : 'flex';
-  });
-const scrollBtn = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", () => {
-  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-});
-
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-  // Smooth scrolling for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e){
-      const targetId = this.getAttribute('href').slice(1);
-      const target = document.getElementById(targetId);
-      if(target){
-        e.preventDefault();
-        // close mobile nav when navigating
-        if(window.innerWidth <= 900) navList.style.display = 'none';
-        // Smooth scroll
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-      }
-    });
-  });
-
-  // Simple reveal-on-scroll: add 'reveal' class when element is visible
-  const revealElements = document.querySelectorAll('.card, .skill, .hero-text, .hero-card');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('reveal');
-      }
-    });
-  }, {threshold: 0.12});
-  revealElements.forEach(el => revealObserver.observe(el));
-
-});
-
-/* Notes for beginners:
- - This file uses only modern, plain JS APIs.
- - `scrollIntoView` provides smooth scrolling without a library.
- - `IntersectionObserver` is used for lightweight scroll reveals.
-*/
->>>>>>> d433c131b0922fbd52f52a65e8a8f3399769bded
+}

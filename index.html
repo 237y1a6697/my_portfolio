@@ -1,159 +1,338 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prashanth Kavuri — Fresher Frontend Developer</title>
-  <meta name="description" content="Prashanth Kavuri - Fresher frontend developer portfolio — Java, JS, HTML, CSS, DSA, ML basics." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prashanth Kumar Kavuri | AI/ML Engineer & Full-Stack Developer</title>
+  <meta name="description"
+    content="Portfolio of Prashanth Kumar Kavuri, a Computer Science student specializing in AI/ML and Full-Stack Development.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#hero">Prashanth Kavuri</a>
-      <nav class="nav" id="nav">
-        <ul class="nav-list" id="nav-list">
-          <li><a href="#hero" class="nav-link">Home</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+  <nav class="navbar" id="navbar">
+    <div class="nav-content">
+      <div class="logo">PK<span class="neon-text">.</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <main>
-    <section id="hero" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Hi — I'm <span class="name">Prashanth Kavuri</span></h1>
-          <p class="role">Fresher | web Developer | Java Develper</p>
-          <p class="lead">I build clean, accessible user interfaces and practice algorithms to write efficient code.</p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#contact">Contact Me</a>
-            <a class="btn btn-ghost" href="#projects">View Projects</a>
+    <section id="home" class="hero">
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <p class="greeting">Hi, I'm</p>
+        <h1 class="name">Prashanth Kumar Kavuri</h1>
+        <h2 class="role">I am a <span class="typing-text"></span><span class="cursor">&nbsp;</span></h2>
+        <p class="tagline">I build intelligent web applications using AI and full-stack technologies to solve real-world
+          problems.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#resume" class="btn btn-outline">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section-padding">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-right">About <span class="neon-text">Me</span></h2>
+        <div class="about-content" data-aos="fade-up">
+          <div class="about-text glass-card">
+            <p>I am a passionate Computer Science student specializing in the intersection of Artificial Intelligence
+              and Full-Stack Development. My focus lies in architecting intelligent systems that abstract complex data
+              into intuitive, user-centric applications.</p>
+            <p>I thrive on problem-solving, having built solutions ranging from NLP-driven data dashboards to scalable
+              predictive models. I'm constantly exploring new technologies to bridge the gap between machine learning
+              capabilities and seamless frontend experiences.</p>
+          </div>
+          <div class="about-stats glass-card">
+            <div class="stat-item">
+              <i class="fas fa-code-branch stat-icon"></i>
+              <h3>Problem Solver</h3>
+              <p>Tackling real-world challenges</p>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-brain stat-icon"></i>
+              <h3>AI Driven</h3>
+              <p>Integrating ML into products</p>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-layer-group stat-icon"></i>
+              <h3>Full-Stack</h3>
+              <p>End-to-end development</p>
+            </div>
           </div>
         </div>
-        <div class="hero-card">
-          <div class="profile-pulse">
-            <!-- Add a profile image by replacing the empty src attribute -->
-            
-  
-
-           
-        </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="skills" class="skills section-padding">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-sub">Technologies & areas I'm focused on</p>
+        <h2 class="section-title" data-aos="fade-right">Technical <span class="neon-text">Arsenal</span></h2>
         <div class="skills-grid">
-          <div class="skill">Java</div>
-          <div class="skill">Python</div>
-                    <div class="skill">Basics of Machine Learning</div>
-           <div class="skill">Data Structures & Algorithms</div>
-           <br>
-          <div class="skill">HTML</div>
-          <div class="skill">CSS</div>
-          <div class="skill">JavaScript</div>
-          
+          <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="100">
+            <h3><i class="fas fa-terminal"></i> Programming</h3>
+            <div class="skill-tags">
+              <span>Python</span><span>Java</span><span>SQL</span><span>JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="200">
+            <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+            <div class="skill-tags">
+              <span>React</span><span>HTML5</span><span>CSS3</span><span>Tailwind</span>
+            </div>
+          </div>
+          <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="300">
+            <h3><i class="fas fa-server"></i> Backend</h3>
+            <div class="skill-tags">
+              <span>Node.js</span><span>Express</span><span>FastAPI</span>
+            </div>
+          </div>
+          <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="400">
+            <h3><i class="fas fa-network-wired"></i> AI & Data</h3>
+            <div class="skill-tags">
+              <span>Machine Learning</span><span>Data Analysis</span><span>NLP</span><span>Pandas</span>
+            </div>
+          </div>
+          <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="500">
+            <h3><i class="fas fa-database"></i> Databases</h3>
+            <div class="skill-tags">
+              <span>MySQL</span><span>MongoDB</span><span>PostgreSQL</span>
+            </div>
+          </div>
+          <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="600">
+            <h3><i class="fas fa-tools"></i> Tools</h3>
+            <div class="skill-tags">
+              <span>Git</span><span>GitHub</span><span>VS Code</span><span>Docker</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="projects section-padding">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-sub">Projects to demonstrate my practical skills</p>
-        <div class="projects-grid"> 
-          <article class="card project-card">
-            <h3>Typing Speed Test</h3>
-            <p class="muted">A JavaScript-based typing speed tester — measures WPM & accuracy.</p>
-            <p class="tags">JavaScript · DOM · UX</p>
-            <div class="card-actions">
-              <a class="btn btn-sm" href="https://237y1a6697.github.io/Typing-Speed-Test/" target="_blank">Live Demo</a>
-              <a class="btn btn-ghost btn-sm" href="https://github.com/237y1a6697" target="_blank">Source</a>
+        <h2 class="section-title" data-aos="fade-right">Featured <span class="neon-text">Projects</span></h2>
+        <div class="projects-grid">
+          <div class="project-card glass-card" data-aos="fade-up">
+            <div class="project-img-wrapper">
+              <img src="assets/project_prism.png" alt="PRISM Dashboard" class="project-img">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://conversational-bi.vercel.app/" class="icon-link"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/237y1a6697/conversational-bi.git" class="icon-link"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
             </div>
-          </article>
+            <div class="project-info">
+              <h3>PRISM – Conversational Data Intelligence</h3>
+              <p>An AI-powered dashboard that converts natural language into SQL queries, enabling non-technical users
+                to seamlessly analyze complex datasets.</p>
+              <div class="project-metrics">
+                <span><i class="fas fa-chart-line"></i> Improved exploration efficiency by ~90%</span>
+              </div>
+              <div class="tech-stack">
+                <span>FastAPI</span><span>Groq API</span><span>React</span><span>SQL</span>
+              </div>
+            </div>
+          </div>
 
-          <article class="card project-card">
-            <h3>Portfolio Website</h3>
-            <p class="muted">This single-page portfolio built with HTML, CSS, and vanilla JS.</p>
-            <p class="tags">Responsive · Accessibility · Design</p>
-            <div class="card-actions">
-              <a class="btn btn-sm" href="https://myportfolio-livid-pi.vercel.app/" target="_blank">Live</a>
-              <a class="btn btn-ghost btn-sm" href="https://github.com/237y1a6697/my_portfolio" target="_blank">Source</a>
+          <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-img-wrapper">
+              <img src="assets/project_churn.png" alt="Churn Prediction" class="project-img">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="icon-link"><i class="fas fa-external-link-alt"></i></a>
+                  <a href="https://github.com/237y1a6697/Customer-Churn-Prediction.git" class="icon-link"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
             </div>
-          </article>
-
-          <article class="card project-card">
-            <h3>Mini ML Project</h3>
-            <p class="muted">A simple experiment demonstrating basic ML concepts and visualization.</p>
-            <p class="tags">Python · ML · Visualization</p>
-            <div class="card-actions">
-              <a class="btn btn-sm" href="https://github.com/237y1a6697" target="_blank">Details</a>
-              <a class="btn btn-ghost btn-sm" href="https://github.com/237y1a6697" target="_blank">Source</a>
+            <div class="project-info">
+              <h3>Customer Churn Prediction System</h3>
+              <p>A robust machine learning pipeline and dashboard for the telecom sector that predicts user churn and
+                provides real-time actionable insights.</p>
+              <div class="project-metrics">
+                <span><i class="fas fa-bullseye"></i> Achieved 88% accuracy with ensemble models</span>
+              </div>
+              <div class="tech-stack">
+                <span>Python</span><span>Scikit-Learn</span><span>Flask</span><span>React</span>
+              </div>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact-section">
+    <section id="experience" class="experience section-padding">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-sub">I'd love to connect — feel free to reach out</p>
-        <div class="contact-cards">
-          <a class="contact-card" href="mailto:prashanthkavuri786@gmail.com">
-            <div class="icon">✉️</div>
-            <div>
-              <h4>Email</h4>
-              <p>prashanthkavuri786@gmail.com</p>
+        <h2 class="section-title" data-aos="fade-right">Work <span class="neon-text">Experience</span></h2>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3>AI/ML Virtual Internship</h3>
+                <span class="company">AWS</span>
+              </div>
+              <span class="date"><i class="far fa-calendar-alt"></i> Jan 2025 - March 2025</span>
+              <ul>
+                <li>Developed and optimized machine learning models for predictive analytics.</li>
+                <li>Performed extensive data preprocessing and feature engineering, improving model performance by 15%.
+                </li>
+                <li>Collaborated in a virtual environment to deploy scalable AI solutions using AWS services.</li>
+              </ul>
             </div>
-          </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="experience section-padding">
+      <div class="container">
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3>Data Engineering Virtual Internship</h3>
+                <span class="company">AWS</span>
+              </div>
+              <span class="date"><i class="far fa-calendar-alt"></i> April 2025 - March 2025</span>
+               <ul>
+      <li>Completed a 10-week structured internship focused on data engineering fundamentals and cloud-based data workflows.</li>
+      <li>Worked with data pipelines, ETL processes, and large-scale data handling concepts using AWS ecosystem tools.</li>
+      <li>Gained hands-on experience in data processing, storage solutions, and real-world data engineering practices.</li>
+      <li>Strengthened understanding of scalable data architectures and cloud-based analytics systems.</li>
+    </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
-          <a class="contact-card" href="https://github.com/237y1a6697" id="github-link">
-            <div class="icon">🐙</div>
-            <div>
-              <h4>GitHub</h4>
-              <p>github.com/237y1a6697</p>
+    <section id="achievements" class="achievements section-padding">
+      <div class="container">
+        <div class="two-column-layout">
+          <div class="achievements-col" data-aos="fade-right">
+            <h2 class="section-title">Achievements & <span class="neon-text">Certifications</span></h2>
+            <ul class="achievement-list">
+              <li class="glass-card"><i class="fas fa-certificate"></i> NPTEL Java Programming Certification</li>
+              <li class="glass-card"><i class="fas fa-database"></i> MongoDB Certified Developer</li>
+              <li class="glass-card"><i class="fab fa-python"></i> Python Development & Data Analytics</li>
+              <li class="glass-card"><i class="fas fa-trophy"></i> EY Hackathon Participant</li>
+            </ul>
+          </div>
+          <div class="why-hire-col" data-aos="fade-left">
+            <h2 class="section-title">Why <span class="neon-text">Hire Me?</span></h2>
+            <div class="hire-cards">
+              <div class="hire-card glass-card">
+                <h4><i class="fas fa-link"></i> AI + Full-Stack Synergy</h4>
+                <p>Bridging intelligent algorithms with robust web interfaces.</p>
+              </div>
+              <div class="hire-card glass-card">
+                <h4><i class="fas fa-rocket"></i> Real-World Impact</h4>
+                <p>Proven experience building end-to-end, functional applications.</p>
+              </div>
+              <div class="hire-card glass-card">
+                <h4><i class="fas fa-tachometer-alt"></i> API & ML Expertise</h4>
+                <p>Seamless integration of data pipelines and predictive modeling.</p>
+              </div>
             </div>
-          </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <a class="contact-card" href="https://www.linkedin.com/in/prashanthkavuri/" id="linkedin-link">
-            <div class="icon">💼</div>    
-            <div>
-              <h4>LinkedIn</h4>
-              <p>linkedin.com/in/prashanthkavuri</p>
-            </div>
-          </a>
+    <section id="resume" class="resume section-padding">
+      <div class="container">
+        <div class="resume-banner glass-card" data-aos="zoom-in">
+          <div class="resume-info">
+            <h2>Ready to make an impact?</h2>
+            <p>Academic Highlight: <span class="neon-text font-bold">8.1 CGPA</span> | Specialization: <span
+                class="neon-text">AI/ML</span></p>
+          </div>
+          <a href="https://drive.google.com/file/d/10QiqscVS-XzKdyetLrbmQXXHAfBkNzfD/view?usp=sharing" class="btn btn-primary btn-large"><i class="fas fa-download"></i> Download Resume</a>
+        </div>
+      </div>
+    </section>
 
-          <a class="contact-card" href="https://leetcode.com/u/tuO7vJj6SL/">
-            <div class="icon">💡</div>
-            <div>
-              <h4>LeetCode</h4>
-              <p>leetcode.com/u/prashanth</p>
+    <section id="contact" class="contact section-padding">
+      <div class="container">
+        <h2 class="section-title text-center" data-aos="fade-up">Get In <span class="neon-text">Touch</span></h2>
+        <p class="contact-subtitle text-center" data-aos="fade-up">Open to internships and entry-level opportunities</p>
+
+        <div class="contact-wrapper">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item glass-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>prashanthkavuri786@gmail.com</p>
+              </div>
             </div>
-          </a>
+            <div class="social-links">
+              <a href="#" class="social-btn glass-card"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-btn glass-card"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-btn glass-card"><i class="fas fa-code"></i></a>
+            </div>
+
+            <!-- GitHub Stats Placeholder -->
+            <div class="github-stats glass-card mt-4">
+              <h4>GitHub Activity</h4>
+              <img
+                src="https://github-readme-stats.vercel.app/api?username=octocat&theme=radical&hide_border=true&bg_color=0D1117"
+                alt="GitHub Stats" class="img-fluid rounded">
+            </div>
+          </div>
+
+          <form class="contact-form glass-card" data-aos="fade-left">
+            <div class="form-group">
+              <input type="text" id="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message <i
+                class="fas fa-paper-plane"></i></button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Prashanth Kavuri </p>
-      <p class="muted">Built with HTML, CSS & JavaScript</p>
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo">PK<span class="neon-text">.</span></div>
+      <p>&copy; 2026 Prashanth Kumar Kavuri. Built with passion.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
