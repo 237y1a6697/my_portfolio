@@ -87,6 +87,8 @@ if (typingText) {
 
 // Contact Form Submit Handler
 const contactForm = document.querySelector('.contact-form');
+const toast = document.getElementById('form-toast');
+
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -95,7 +97,7 @@ if (contactForm) {
         const originalText = btn.innerHTML;
         const formData = new FormData(contactForm);
         
-        // Show loading state
+        // Sending state
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         btn.disabled = true;
 
@@ -103,38 +105,32 @@ if (contactForm) {
             const response = await fetch(contactForm.action, {
                 method: 'POST',
                 body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             });
 
-            if (response.ok) {
-                // Success state
-                btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                btn.style.background = 'linear-gradient(135deg, #00f3ff, #00ff88)';
+            const result = await response.json();
+
+            if (response.ok && result.success === "true") {
+                // Success
+                showToast('Success! Message sent.', 'success');
                 contactForm.reset();
             } else {
-                throw new Error('Submission failed');
+                throw new Error();
             }
         } catch (error) {
-            // Fallback to mailto if Formspree fails
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-            const mailtoUrl = `mailto:prashanthkavuri786@gmail.com?subject=Portfolio Message from ${name}&body=From: ${name} (${email})%0D%0A%0D%0A${message}`;
-            
-            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Try Email Client';
-            btn.style.background = 'linear-gradient(135deg, #c18fff, #00f0ff)';
-            
-            // Open email client
-            window.location.href = mailtoUrl;
+            // Error
+            showToast('Error! Please try again.', 'error');
         } finally {
-            // Reset button after 5 seconds
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.background = '';
-                btn.disabled = false;
-            }, 5000);
+            btn.innerHTML = originalText;
+            btn.disabled = false;
         }
     });
+}
+
+function showToast(message, type) {
+    toast.textContent = message;
+    toast.className = `form-toast show ${type}`;
+    setTimeout(() => {
+        toast.className = 'form-toast';
+    }, 4000);
 }

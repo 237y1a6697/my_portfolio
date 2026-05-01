@@ -566,16 +566,21 @@ a {
 .form-group input, .form-group textarea {
   width: 100%;
   padding: 1rem 1.5rem;
-  background: var(--surface) !important; /* Force dark background */
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
-  color: #ffffff !important;
+  color: #fff;
   font-family: inherit;
   transition: var(--transition);
 }
 
-.form-group input::placeholder, .form-group textarea::placeholder {
-  color: var(--muted);
+/* Fix white background on autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px var(--surface) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .form-group input:focus, .form-group textarea:focus {
@@ -583,6 +588,20 @@ a {
   border-color: var(--accent-cyan);
   box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
 }
+
+/* Minimal Toast */
+.form-toast {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form-toast.show { opacity: 1; }
+.form-toast.success { color: #00ff88; }
+.form-toast.error { color: #ff4b2b; }
 
 .btn-block {
   width: 100%;
