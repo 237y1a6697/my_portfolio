@@ -239,7 +239,9 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 900px;
+  text-align: center; /* Center all text */
+  margin: 0 auto;
 }
 
 .greeting {
@@ -247,18 +249,19 @@ a {
   font-weight: 600;
   margin-bottom: 1rem;
   display: block;
+  font-size: 1.2rem;
 }
 
 .name {
   font-family: 'Outfit', sans-serif;
-  font-size: 4.5rem;
+  font-size: 4rem; /* Slightly reduced for better centering */
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
 
 .role {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--muted);
   margin-bottom: 2rem;
@@ -279,14 +282,15 @@ a {
 }
 
 .tagline {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--muted);
-  max-width: 600px;
-  margin-bottom: 3rem;
+  max-width: 700px;
+  margin: 0 auto 3rem auto; /* Centered margin */
 }
 
 .hero-cta {
   display: flex;
+  justify-content: center; /* Center buttons */
   gap: 1.5rem;
 }
 
