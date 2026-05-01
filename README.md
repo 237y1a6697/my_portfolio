@@ -44,6 +44,7 @@ npx http-server
 
 ## 📞 Contact
 - **Email**: [prashanthkavuri786@gmail.com](mailto:prashanthkavuri786@gmail.com)
+- **Phone**: +91 8498085542
 - **LinkedIn**: [Prashanth Kavuri](https://www.linkedin.com/in/kavuriprashanth/)
 - **GitHub**: [@237y1a6697](https://github.com/237y1a6697)
 
