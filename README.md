@@ -1,67 +1,51 @@
-<<<<<<< HEAD
-# Portfolio 
+# 🚀 Prashanth Kumar Kavuri | Portfolio
 
-A modern, responsive portfolio website showcasing my skills as a fresher frontend developer.
+A premium, high-impact personal portfolio website designed for AI/ML Engineers and Full-Stack Developers. This project showcases technical expertise through a modern, responsive, and aesthetically rich interface.
 
-## 🛠️ Technologies Used
-- HTML5
-- CSS3 (with CSS Grid & Flexbox)
-- Vanilla JavaScript
-- Responsive Design
+![Portfolio Preview](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=for-the-badge&logo=vercel)
+![Tech Stack](https://img.shields.io/badge/Tech-HTML5%20|%20CSS3%20|%20JS-blue?style=for-the-badge)
 
-## 📋 Features
-- Dark theme with neon accents
-- Smooth scrolling navigation
-- Mobile-responsive design
-- Contact information with social links
-- Skills showcase
-- Project portfolio section
+## 🎨 Design Philosophy
+This portfolio follows modern web design trends:
+- **Neon Accents & Dark Mode**: A sleek `#0b0b0f` background with `#00f0ff` (Cyan) and `#c18fff` (Purple) highlights.
+- **Glassmorphism**: UI components use translucent backgrounds with subtle blurs for a premium feel.
+- **Interactive UX**: Smooth scroll animations (AOS), hover effects, and a dynamic typing hero section.
 
-## 📞 Contact
-- **Email:** prashanthkavuri786@gmail.com
-- **LinkedIn:** [linkedin.com/in/kavuriprashanth](https://www.linkedin.com/in/kavuriprashanth/)
-- **GitHub:** [github.com/237y1a6697](https://github.com/237y1a6697)
-- **LeetCode:** [leetcode.com/u/prashanth](https://leetcode.com/u/tuO7vJj6SL/)
+## 🛠️ Technical Arsenal
+- **Frontend**: HTML5, Vanilla CSS3 (Custom Design System), JavaScript (ES6+).
+- **Libraries**: [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/) for entry animations.
+- **Visuals**: Custom AI-generated project mockups and FontAwesome icons.
 
-## 🏃‍♂️ Local Development
-1. Clone the repository
-2. Open `index.html` in your browser
-3. Or use a local server: `npx http-server`
+## 📁 Key Sections
+1. **Hero**: High-impact introduction with a dynamic typing effect for roles.
+2. **About**: Professional summary and key focus areas (Problem Solver, AI Driven, Full-Stack).
+3. **Skills**: Categorized technical arsenal (Programming, Frontend, Backend, AI & Data).
+4. **Projects**:
+    - **PRISM**: Conversational Data Intelligence (Natural Language to SQL).
+    - **Churn Prediction**: ML pipeline for telecom user retention.
+5. **Experience**: Professional timeline featuring AWS Virtual Internships.
+6. **Contact**: Fully responsive form and social integration (LinkedIn, GitHub).
 
----
-Built with ❤️ by Prashanth Kavuri
+## 🚀 Getting Started
 
-=======
-# Portfolio 
+### Local Development
+To run this project locally, simply clone the repo and use a local server:
 
-A modern, responsive portfolio website showcasing my skills as a fresher frontend developer.
+```bash
+# Clone the repository
+git clone https://github.com/237y1a6697/my_portfolio.git
 
-## 🛠️ Technologies Used
-- HTML5
-- CSS3 (with CSS Grid & Flexbox)
-- Vanilla JavaScript
-- Responsive Design
+# Navigate to the folder
+cd my_portfolio
 
-## 📋 Features
-- Dark theme with neon accents
-- Smooth scrolling navigation
-- Mobile-responsive design
-- Contact information with social links
-- Skills showcase
-- Project portfolio section
+# Run a local server (optional but recommended)
+npx http-server
+```
 
 ## 📞 Contact
-- **Email:** prashanthkavuri786@gmail.com
-- **LinkedIn:** [linkedin.com/in/kavuriprashanth](https://www.linkedin.com/in/kavuriprashanth/)
-- **GitHub:** [github.com/237y1a6697](https://github.com/237y1a6697)
-- **LeetCode:** [leetcode.com/u/prashanth](https://leetcode.com/u/tuO7vJj6SL/)
-
-## 🏃‍♂️ Local Development
-1. Clone the repository
-2. Open `index.html` in your browser
-3. Or use a local server: `npx http-server`
+- **Email**: [prashanthkavuri786@gmail.com](mailto:prashanthkavuri786@gmail.com)
+- **LinkedIn**: [Prashanth Kavuri](https://www.linkedin.com/in/kavuriprashanth/)
+- **GitHub**: [@237y1a6697](https://github.com/237y1a6697)
 
 ---
-Built with ❤️ by Prashanth Kavuri
-
->>>>>>> d433c131b0922fbd52f52a65e8a8f3399769bded
+Designed and developed with ❤️ by **Prashanth Kumar Kavuri**.
