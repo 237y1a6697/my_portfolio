@@ -117,16 +117,24 @@ if (contactForm) {
                 throw new Error('Submission failed');
             }
         } catch (error) {
-            // Error state
-            btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error!';
-            btn.style.background = 'linear-gradient(135deg, #ff4b2b, #ff416c)';
+            // Fallback to mailto if Formspree fails
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            const mailtoUrl = `mailto:prashanthkavuri786@gmail.com?subject=Portfolio Message from ${name}&body=From: ${name} (${email})%0D%0A%0D%0A${message}`;
+            
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Try Email Client';
+            btn.style.background = 'linear-gradient(135deg, #c18fff, #00f0ff)';
+            
+            // Open email client
+            window.location.href = mailtoUrl;
         } finally {
-            // Reset button after 3 seconds
+            // Reset button after 5 seconds
             setTimeout(() => {
                 btn.innerHTML = originalText;
                 btn.style.background = '';
                 btn.disabled = false;
-            }, 3000);
+            }, 5000);
         }
     });
 }

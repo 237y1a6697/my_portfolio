@@ -566,17 +566,22 @@ a {
 .form-group input, .form-group textarea {
   width: 100%;
   padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface) !important; /* Force dark background */
   border: 1px solid var(--glass-border);
   border-radius: 12px;
-  color: #fff;
+  color: #ffffff !important;
   font-family: inherit;
   transition: var(--transition);
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+  color: var(--muted);
 }
 
 .form-group input:focus, .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
 }
 
 .btn-block {
