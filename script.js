@@ -88,23 +88,45 @@ if (typingText) {
 // Contact Form Submit Handler
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Change button text to show success (mock)
         const btn = contactForm.querySelector('button');
         const originalText = btn.innerHTML;
+        const formData = new FormData(contactForm);
         
-        btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-        btn.style.background = 'linear-gradient(135deg, #00f3ff, #00ff88)';
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Reset button after 3 seconds
-        setTimeout(() => {
-            btn.innerHTML = originalText;
-            btn.style.background = '';
-        }, 3000);
+        // Show loading state
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        btn.disabled = true;
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Success state
+                btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                btn.style.background = 'linear-gradient(135deg, #00f3ff, #00ff88)';
+                contactForm.reset();
+            } else {
+                throw new Error('Submission failed');
+            }
+        } catch (error) {
+            // Error state
+            btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Error!';
+            btn.style.background = 'linear-gradient(135deg, #ff4b2b, #ff416c)';
+        } finally {
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.disabled = false;
+            }, 3000);
+        }
     });
 }
