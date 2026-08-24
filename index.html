@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prashanth Kumar Kavuri | AI/ML Engineer & Full Stack Developer</title>
+  <meta name="description"
+    content="Portfolio of Prashanth Kumar Kavuri — B.Tech CSE (AI/ML) student, Java Full Stack Developer Intern, and builder of secure full-stack applications.">
+  <!-- Preconnect to speed up font & icon loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- FontAwesome non-blocking (media swap trick) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </noscript>
+  <!-- Portfolio stylesheets -->
+  <link rel="stylesheet" href="futuristic.css">
+  <link rel="stylesheet" href="hero-fix.css">
+  <link rel="stylesheet" href="effects.css">
+</head>
+
+<body>
+  <!-- Cursor glow -->
+  <div id="cursor-glow"></div>
+  <!-- Canvas for floating particles/stars -->
+  <canvas id="particles-canvas"></canvas>
+  <!-- Horizontally moving subtle grid -->
+  <div class="moving-grid"></div>
+  <!-- Light mode only: blobs, dot pattern, sun rays -->
+  <div class="light-blob light-blob-1"></div>
+  <div class="light-blob light-blob-2"></div>
+  <div class="light-blob light-blob-3"></div>
+  <div class="light-dots"></div>
+  <div class="sun-rays"></div>
+
+  <div class="background-blobs" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="glow glow-left"></div>
+    <div class="glow glow-right"></div>
+    <div class="grid-floor"></div>
+    <div class="wave wave-one"></div>
+    <div class="wave wave-two"></div>
+  </div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-content"><a href="#home" class="logo">Prashanth<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions"><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"><i
+            class="fas fa-sun"></i><i class="fas fa-moon"></i></button><button class="hamburger"
+          aria-label="Open menu"><i class="fas fa-bars"></i></button></div>
+    </div>
+  </nav>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-inner">
+        <div class="hero-copy" data-aos="fade-right">
+          <div class="hello">Hello, I'm <span>👋</span></div>
+          <h1>Prashanth Kumar<br><strong>Kavuri</strong></h1>
+          <h2><span>AI/ML Engineer</span><b>|</b> Full Stack Developer</h2>
+          <p class="hero-tagline">I build secure full-stack applications using Java, Spring Boot, React, and PostgreSQL
+            to solve real-world problems.</p>
+          <div class="quick-contact"><a href="mailto:prashanthkavuri786@gmail.com"><i class="far fa-envelope"></i>
+              prashanthkavuri786@gmail.com</a><a href="tel:+918498085542"><i class="fas fa-phone"></i> +91
+              8498085542</a><span><i class="fas fa-location-dot"></i> Hyderabad</span><a
+              href="https://www.linkedin.com/in/kavuriprashanth/" target="_blank" rel="noopener"><i
+                class="fab fa-linkedin"></i> LinkedIn</a><a href="https://github.com/237y1a6697" target="_blank"
+              rel="noopener"><i class="fab fa-github"></i> GitHub</a></div>
+          <div class="hero-cta"><a href="#projects" class="btn btn-primary">View Projects <i
+                class="fas fa-arrow-right"></i></a><a href="#resume" class="btn btn-outline">Download Resume <i
+                class="fas fa-download"></i></a></div>
+        </div>
+        <div class="hero-visual" data-aos="fade-left">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="portrait"><img class="profile-photo" src="assets/profile-photo.svg" alt="Prashanth Kumar Kavuri"
+              loading="eager" decoding="async"></div>
+          <div class="tech-node node-java"><i class="fab fa-java"></i></div>
+          <div class="tech-node node-spring"><i class="fas fa-leaf"></i></div>
+          <div class="tech-node node-react"><i class="fab fa-react"></i></div>
+          <div class="tech-node node-db"><i class="fas fa-database"></i></div>
+          <div class="tech-node node-docker"><i class="fab fa-docker"></i></div>
+          <div class="tech-node node-git"><i class="fab fa-git-alt"></i></div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section-padding">
+      <div class="container">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-grid">
+          <div class="glass-card about-text">
+            <p>B.Tech CSE (AI/ML) student with hands-on experience developing secure full-stack applications using Java,
+              Spring Boot, React, and PostgreSQL.</p>
+            <p>Experienced in REST APIs, microservices, RBAC/JWT authentication, and Agile development through
+              enterprise security platform projects and internship experience.</p>
+          </div>
+          <div class="stats">
+            <div class="glass-card"><i class="fas fa-code"></i>
+              <h3>Full Stack</h3>
+              <p>Java · Spring Boot · React</p>
+            </div>
+            <div class="glass-card"><i class="fas fa-shield-halved"></i>
+              <h3>Secure Apps</h3>
+              <p>RBAC · JWT · REST APIs</p>
+            </div>
+            <div class="glass-card"><i class="fas fa-diagram-project"></i>
+              <h3>Microservices</h3>
+              <p>Enterprise architecture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section-padding">
+      <div class="container">
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <div class="skills-grid">
+          <div class="skill-card glass-card"><i class="fas fa-terminal"></i>
+            <h3>Programming</h3>
+            <div><span>Java</span><span>Python</span><span>SQL</span></div>
+          </div>
+          <div class="skill-card glass-card"><i class="fas fa-laptop-code"></i>
+            <h3>Frameworks</h3>
+            <div><span>Spring Boot</span><span>Spring Security</span><span>Spring Data
+                JPA</span><span>React</span><span>REST APIs</span></div>
+          </div>
+          <div class="skill-card glass-card"><i class="fas fa-database"></i>
+            <h3>Databases</h3>
+            <div><span>MySQL</span><span>PostgreSQL</span><span>Redis</span></div>
+          </div>
+          <div class="skill-card glass-card"><i class="fas fa-tools"></i>
+            <h3>Tools</h3>
+            <div><span>Docker</span><span>Git</span><span>Maven</span><span>IntelliJ IDEA</span><span>Visual Studio
+                Code</span></div>
+          </div>
+          <div class="skill-card glass-card"><i class="fas fa-sitemap"></i>
+            <h3>Core CS</h3>
+            <div><span>DSA</span><span>OOP</span><span>Software Engineering</span></div>
+          </div>
+          <div class="skill-card glass-card"><i class="fas fa-users"></i>
+            <h3>Soft Skills</h3>
+            <div><span>Problem Solving</span><span>Team Collaboration</span><span>Communication</span><span>Analytical
+                Thinking</span><span>Adaptability</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="section-padding">
+      <div class="container">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="projects-grid">
+          <article class="project-card glass-card">
+            <div class="project-visual visual-security"><i class="fas fa-shield-halved"></i><span>SECURITY
+                OPERATIONS</span></div>
+            <div class="project-info">
+              <div class="eyebrow">01 · JUN 2026 – AUG 2026</div>
+              <h3>Cloud Security Monitoring System with Incident Management Assistance</h3>
+              <p>Cloud-native enterprise security platform built with Java 21, Spring Boot 3.x, React, PostgreSQL, and
+                Redis using a microservices architecture and Agile practices.</p>
+              <ul class="project-points">
+                <li>Keycloak-based RBAC with JWT security.</li>
+                <li>Monitored 2,847+ assets with 99.99% uptime.</li>
+                <li>Tracked 847 vulnerabilities and 23 active incidents.</li>
+                <li>Immutable audit logs for PCI DSS compliance.</li>
+              </ul>
+              <div class="tech-stack"><span>Java 21</span><span>Spring
+                  Boot</span><span>React</span><span>PostgreSQL</span><span>Redis</span></div>
+              <div class="project-actions">
+                <a href="https://github.com/237y1a6697/Cloud-Security-Monitoring-System.git" target="_blank"
+                  rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-github"></i>
+                  GitHub</a>
+                <a href="https://sentinel-core-secure-ops-f7k2-o14zhdkac-prasahnths-projects.vercel.app" target="_blank"
+                  rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card glass-card">
+            <div class="project-visual visual-spend"><i class="fas fa-chart-line"></i><span>FINANCIAL ANALYTICS</span>
+            </div>
+            <div class="project-info">
+              <div class="eyebrow">02 · JAN 2026 – MAY 2026</div>
+              <h3>SpendSense – Smart Expense Analysis Tracker</h3>
+              <p>Full-stack expense analysis web application for secure personal finance management with interactive
+                analytics and an AI-powered financial assistant.</p>
+              <ul class="project-points">
+                <li>React, Node.js, Express.js and Firebase Authentication.</li>
+                <li>Recharts dashboards, CSV transaction import and budget tracking.</li>
+                <li>PDF report generation for financial analysis.</li>
+                <li>AI assistant analyzes spending patterns and provides personalized insights.</li>
+              </ul>
+              <div class="tech-stack"><span>React</span><span>Node.js</span><span>Express.js</span><span>Firebase
+                  Authentication</span><span>Firestore</span></div>
+              <div class="project-actions">
+                <a href="https://github.com/237y1a6697/SpendSense--Smart-Expense-Analysis-Tracker.git" target="_blank"
+                  rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-github"></i>
+                  GitHub</a>
+                <a href="https://spend-sense-smart-expense-analysis.vercel.app/" target="_blank" rel="noopener"
+                  class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="section-padding">
+      <div class="container">
+        <h2 class="section-title">Work <span>Experience</span></h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-head">
+                <div>
+                  <h3>Java Full Stack Developer Intern</h3>
+                  <p class="company">Infosys Springboard</p>
+                </div><span>Jun 2026 – Aug 2026</span>
+              </div>
+              <ul>
+                <li>Contributed to an enterprise security platform comprising 6+ modules using Java, Spring Boot, React,
+                  and PostgreSQL.</li>
+                <li>Validated 20+ REST API endpoints while performing debugging, testing, deployment, and Git-based
+                  version control across multiple modules.</li>
+                <li>Participated in Agile sprints, implementing and testing 15+ application features through Git-based
+                  workflows.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="education" class="section-padding">
+      <div class="container">
+        <h2 class="section-title">Academic <span>Education</span></h2>
+        <div class="education-full-card glass-card">
+          <div class="edu-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-details-wrap">
+            <div class="edu-head-row">
+              <h3>B.Tech in Computer Science and Engineering (AI/ML)</h3>
+              <span class="edu-date-span">2023 – 2027</span>
+            </div>
+            <p class="edu-inst">Marri Laxman Reddy Institute of Technology and Management, Hyderabad</p>
+            <p class="edu-desc">Specializing in Artificial Intelligence and Machine Learning. Acquiring core engineering
+              foundations in Software Engineering, Advanced Data Structures, Algorithms, REST APIs, and Secure System
+              Development.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights" class="section-padding">
+      <div class="container">
+        <h2 class="section-title">Profile <span>Highlights</span></h2>
+        <div class="highlights-grid-container">
+          <!-- Left Column -->
+          <div class="highlights-column">
+            <div class="glass-card highlight-card">
+              <i class="fas fa-code"></i>
+              <div>
+                <h3>Enterprise Development</h3>
+                <p>Secure full-stack applications and enterprise security platform experience.</p>
+              </div>
+            </div>
+            <div class="glass-card highlight-card">
+              <i class="fas fa-people-group"></i>
+              <div>
+                <h3>Agile Collaboration</h3>
+                <p>Internship experience with Git-based workflows and Agile sprints.</p>
+              </div>
+            </div>
+            <div class="glass-card highlight-card">
+              <i class="fas fa-lightbulb"></i>
+              <div>
+                <h3>Problem Solving</h3>
+                <p>Analytical thinking, adaptability, communication, and team collaboration.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Right Column -->
+          <div class="highlights-column">
+            <div class="glass-card highlight-card">
+              <i class="fas fa-shield-halved"></i>
+              <div>
+                <h3>Secure Code Engineering</h3>
+                <p>Practical implementation of authentication filters, Spring Security, and defense-in-depth principles.
+                </p>
+              </div>
+            </div>
+            <div class="glass-card highlight-card">
+              <i class="fas fa-database"></i>
+              <div>
+                <h3>Data Design & Routing</h3>
+                <p>Architected schema relationships, indexing, and state caching with MySQL, PostgreSQL, and Redis.</p>
+              </div>
+            </div>
+            <div class="glass-card highlight-card">
+              <i class="fas fa-brain"></i>
+              <div>
+                <h3>AI & ML Analytics</h3>
+                <p>Academic focus on integrating artificial intelligence models and analyzing system security telemetry
+                  data.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section-padding">
+      <div class="container">
+        <h2 class="section-title center">Featured <span>Certifications</span></h2>
+        <div class="certs-grid">
+          <!-- Card 1 -->
+          <div class="cert-card glass-card">
+            <div class="cert-img-container">
+              <img src="assets/cert-nptel.jpg" alt="NPTEL Java Certification" class="cert-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'; this.parentElement.classList.add('collapsed');">
+              <div class="cert-fallback">
+                <i class="fab fa-java"></i>
+              </div>
+            </div>
+            <div class="cert-info">
+              <h3>NPTEL Java Certification</h3>
+              <p class="issuer">IIT Kharagpur</p>
+              <p class="date">Jul 2026</p>
+              <a href="https://drive.google.com/file/d/17bNkGzF234HaXJh1QUUXpeDBKWzIHa2M/view?usp=sharing"
+                target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i>
+                View Certificate</a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="cert-card glass-card">
+            <div class="cert-img-container">
+              <img src="assets/cert-mongodb.jpg" alt="MongoDB Associate Developer" class="cert-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'; this.parentElement.classList.add('collapsed');">
+              <div class="cert-fallback">
+                <i class="fas fa-database"></i>
+              </div>
+            </div>
+            <div class="cert-info">
+              <h3>MongoDB Associate Developer</h3>
+              <p class="issuer">MongoDB Academy</p>
+              <p class="date">May 2026</p>
+              <a href="#" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i
+                  class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="cert-card glass-card">
+            <div class="cert-img-container">
+              <img src="assets/cert-aws.jpg" alt="AWS Academy Cloud Foundations" class="cert-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'; this.parentElement.classList.add('collapsed');">
+              <div class="cert-fallback">
+                <i class="fab fa-aws"></i>
+              </div>
+            </div>
+            <div class="cert-info">
+              <h3>AWS Academy Cloud Foundations</h3>
+              <p class="issuer">AWS Academy</p>
+              <p class="date">Mar 2026</p>
+              <a href="https://drive.google.com/file/d/1TnRcXdg7gHUgUTJAWkNzkfen0mJrHzNA/view?usp=sharing"
+                target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i>
+                View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="center-btn-wrap">
+          <button id="viewAllCertsBtn" class="btn btn-primary">View All Certifications <i
+              class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+    <section id="resume" class="resume-section">
+      <div class="container">
+        <div class="resume-banner glass-card">
+          <div>
+            <div class="eyebrow">CURRENT RESUME</div>
+            <h2>Ready to make an impact?</h2>
+            <p>B.Tech CSE (AI/ML) · Java Full Stack · Secure Application Development</p>
+          </div><a href="https://drive.google.com/file/d/11xbHXqYwiaKUO9Q8JmuakkY7nTv70vyM/view?usp=sharing"
+            target="_blank" rel="noopener" class="btn btn-primary">Download Resume <i class="fas fa-download"></i></a>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <h2 class="section-title center">Get In <span>Touch</span></h2>
+        <p class="contact-subtitle">Open to internships and entry-level opportunities.</p>
+        <div class="contact-grid"><a class="glass-card" href="mailto:prashanthkavuri786@gmail.com"><i
+              class="fas fa-envelope"></i>
+            <div><b>Email</b>
+              <p>prashanthkavuri786@gmail.com</p>
+            </div>
+          </a><a class="glass-card" href="tel:+918498085542"><i class="fas fa-phone"></i>
+            <div><b>Phone</b>
+              <p>+91 8498085542</p>
+            </div>
+          </a><a class="glass-card" href="https://www.linkedin.com/in/kavuriprashanth/" target="_blank"><i
+              class="fab fa-linkedin"></i>
+            <div><b>LinkedIn</b>
+              <p>Connect with me</p>
+            </div>
+          </a><a class="glass-card" href="https://github.com/237y1a6697" target="_blank"><i class="fab fa-github"></i>
+            <div><b>GitHub</b>
+              <p>View my code</p>
+            </div>
+          </a></div>
+      </div>
+    </section>
+  </main>
+  <div class="chatbot" id="chatbot"><button class="chatbot-toggle" id="chatbotToggle"
+      aria-label="Open portfolio assistant"><i class="fas fa-robot"></i><span class="online-dot"></span></button>
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <div><strong>Portfolio Assistant</strong><small>Ask about Prashanth</small></div><button id="chatClose"
+          aria-label="Close chatbot"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-msg bot">Hi! 👋 I can answer questions only from Prashanth's resume and portfolio. Ask me about
+          his skills, projects, experience, education, certifications, or contact details.</div>
+      </div>
+      <div class="chat-suggestions"><button data-q="What are his skills?">Skills</button><button
+          data-q="Tell me about the security project">Project</button><button
+          data-q="What is his experience?">Experience</button><button data-q="How can I contact him?">Contact</button>
+      </div>
+      <form class="chat-input" id="chatForm"><input id="chatInput" autocomplete="off"
+          placeholder="Ask about the portfolio..." aria-label="Ask portfolio assistant"><button type="submit"
+          aria-label="Send"><i class="fas fa-paper-plane"></i></button></form>
+    </div>
+  </div>
+  <footer>
+    <p>© 2026 Prashanth Kumar Kavuri · Portfolio information is based on the current resume and portfolio.</p>
+  </footer>
+
+  <!-- Modal: All Certifications Gallery -->
+  <div id="certsModal" class="certs-modal-overlay">
+    <div class="certs-modal-container glass-card">
+      <div class="certs-modal-header">
+        <h2>All <span>Certifications</span></h2>
+        <button id="closeCertsModal" class="close-modal-btn" aria-label="Close Gallery"><i
+            class="fas fa-xmark"></i></button>
+      </div>
+      <div class="certs-modal-body">
+        <div class="certs-gallery-grid">
+          <!-- Card 1 -->
+          <div class="gallery-card glass-card">
+            <div class="gallery-img-wrap view-cert-trigger" data-img="assets/cert-nptel.jpg"
+              data-title="NPTEL Java Certification" data-issuer="IIT Kharagpur" data-date="Jul 2026">
+              <img src="assets/cert-nptel.jpg" alt="NPTEL Java Certification"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cert-fallback"><i class="fab fa-java"></i></div>
+              <div class="gallery-hover-overlay"><i class="fas fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-info">
+              <h4>NPTEL Java Certification</h4>
+              <p>IIT Kharagpur · 2026</p>
+              <a href="https://drive.google.com/file/d/17bNkGzF234HaXJh1QUUXpeDBKWzIHa2M/view?usp=sharing"
+                target="_blank" rel="noopener" class="gallery-link-btn"><i class="fas fa-external-link-alt"></i> View
+                Link</a>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="gallery-card glass-card">
+            <div class="gallery-img-wrap view-cert-trigger" data-img="assets/cert-mongodb.jpg"
+              data-title="MongoDB Associate Developer" data-issuer="MongoDB Academy" data-date="May 2026">
+              <img src="assets/cert-mongodb.jpg" alt="MongoDB Associate Developer"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cert-fallback"><i class="fas fa-database"></i></div>
+              <div class="gallery-hover-overlay"><i class="fas fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-info">
+              <h4>MongoDB Associate Developer</h4>
+              <p>MongoDB Academy · 2026</p>
+              <a href="#" target="_blank" rel="noopener" class="gallery-link-btn"><i
+                  class="fas fa-external-link-alt"></i> View Link</a>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="gallery-card glass-card">
+            <div class="gallery-img-wrap view-cert-trigger" data-img="assets/cert-aws.jpg"
+              data-title="AWS Academy Cloud Foundations" data-issuer="AWS Academy" data-date="Mar 2026">
+              <img src="assets/cert-aws.jpg" alt="AWS Academy Cloud Foundations"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cert-fallback"><i class="fab fa-aws"></i></div>
+              <div class="gallery-hover-overlay"><i class="fas fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-info">
+              <h4>AWS Academy Cloud Foundations</h4>
+              <p>AWS Academy · 2026</p>
+              <a href="https://drive.google.com/file/d/1TnRcXdg7gHUgUTJAWkNzkfen0mJrHzNA/view?usp=sharing"
+                target="_blank" rel="noopener" class="gallery-link-btn"><i class="fas fa-external-link-alt"></i> View
+                Link</a>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="gallery-card glass-card">
+            <div class="gallery-img-wrap view-cert-trigger" data-img="assets/cert-pearson.jpg"
+              data-title="Pearson MePro Level 7" data-issuer="Pearson" data-date="Jan 2026">
+              <img src="assets/cert-pearson.jpg" alt="Pearson MePro Level 7"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="cert-fallback"><i class="fas fa-award"></i></div>
+              <div class="gallery-hover-overlay"><i class="fas fa-magnifying-glass-plus"></i></div>
+            </div>
+            <div class="gallery-info">
+              <h4>Pearson MePro Level 7</h4>
+              <p>Pearson Certification · 2026</p>
+              <a href="https://drive.google.com/file/d/1aIBMQIoL-TgEIHlNAZzFWsVvqaueuJtL/view?usp=sharing"
+                target="_blank" rel="noopener" class="gallery-link-btn"><i class="fas fa-external-link-alt"></i> View
+                Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox: Zoomed Certificate -->
+  <div id="certLightbox" class="lightbox-overlay">
+    <button id="closeLightbox" class="close-lightbox-btn" aria-label="Close Zoom"><i class="fas fa-xmark"></i></button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Zoomed Certificate">
+      <div id="lightboxDetails" class="lightbox-details">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxMeta"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
